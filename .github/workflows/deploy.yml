@@ -19,6 +19,7 @@ jobs:
           password:  "${{ secrets.PASSDOC }}"
   deploy:
     needs: test
+    runs-on: ubuntu-latest
     steps:
       - name: Build & Push Dockerfile
         run: |
