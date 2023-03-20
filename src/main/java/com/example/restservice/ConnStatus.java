@@ -1,6 +1,7 @@
 package com.example.restservice;
 
 public class ConnStatus {
+	// its my java project
 
 	private final boolean status;
 	private final String content;
