@@ -17,12 +17,10 @@ jobs:
         with:
           username: "${{ secrets.USERDOC }}"
           password:  "${{ secrets.PASSDOC }}"
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
       - name: Build & Push Dockerfile
         run: |
           docker image build -t utkarshnain24/java-web-image:latest .
           docker push utkarshnain24/java-web-image:latest
-          echo "Successfully Build & Pushed the image to DockerHub" 
+          echo "Successfully Build & Pushed the image to DockerHub"    
+  
+       
