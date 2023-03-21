@@ -1,5 +1,3 @@
-# Build Stage
-
 FROM maven:3.8-openjdk-17 AS builder
 
 RUN mkdir /home/app
@@ -10,7 +8,7 @@ WORKDIR /home/app/
 
 RUN mvn clean package
 
-# Package Stage
+
 
 FROM openjdk:17-slim
 
